@@ -57,13 +57,18 @@ def show_madlib_form():
 @app.route('/madlib')
 def show_madlib(): 
     """Show Madlib game."""
-    sentence_parts = {}
-    # created a dictionary to store variables holding the user input for the game
-    # useful for when we have a long list of items to pass in 
-    sentence_parts['character_name'] = request.args.get("person")
-    sentence_parts['color'] = request.args.get("color")
-    sentence_parts['noun'] = request.args.get("noun")
-    sentence_parts['adjective'] = request.args.get("adjective")
+    # sentence_parts = {}
+    # # created a dictionary to store variables holding the user input for the game
+    # # useful for when we have a long list of items to pass in 
+    # sentence_parts['adjective'] = request.args.get("adjective")
+    # sentence_parts['character_name'] = request.args.get("person")
+    # sentence_parts['color'] = request.args.get("color")
+    # sentence_parts['noun'] = request.args.get("noun")
+    # sentence_parts['adjective'] = request.args.get("adjective")
+    adjective_1 = request.args.get("adjective_1")
+    nationality = request.args.get("nationality")
+    person =  request.args.get("person")
+    noun_1 =  request.args.get("noun_1")
 
     return render_template("madlib.html", 
                             sentence_parts=sentence_parts)
