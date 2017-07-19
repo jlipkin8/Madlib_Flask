@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MadLib Game</title>
+</head>
+<body>
+    <form action="{{url_for('show_madlib')}}">
+        <!-- refer to url for the function show_madlib instead of calling the path -->
+        Character name:<input type="text" name="person"></br></br>
+        Pick a color:<input type="text" name="color"></br></br>
+        Give us a noun:<input type="text" name="noun"></br></br>
+        Give us an adjective:<input type="text" name="adjective"></br></br>
+        <input type="submit">
+    </form>
+</body>
+</html>
